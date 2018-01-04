@@ -8,9 +8,13 @@
 
 ### Style Markup
 > initial Style -> *, body, html, ul, a, img
+--------------------------------------------------------
 > header Style -> header#hd, h1.title
+--------------------------------------------------------
 > navigation Style -> nav, ul, li, a, img
+--------------------------------------------------------
 > page Contents Style -> video#vdo1
+--------------------------------------------------------
 > footer Style -> nav#fnb, ul, li, a, h2.copyright
 
 --------------------------------------------------------
@@ -25,14 +29,24 @@
 
 ### Style Markup
 > initial Style -> *, body, html, ul, a, img
+--------------------------------------------------------
 > header Style -> div.hdbar, a.home, label.collap, h2.title
+--------------------------------------------------------
 > navigation Style -> nav, ul, li, a
+--------------------------------------------------------
 > page Contents Style -> h2.pageTitle, img.pageImg, p.pageComent
+--------------------------------------------------------
 > footer Style -> h3.copyrights
+--------------------------------------------------------
 > sidebar Style -> aside#sidebar, nav#lnb, ul, li, a, div.sidebarBanner
+--------------------------------------------------------
 > button Style -> a.home, label.collap, label#sideOpener
+
+--------------------------------------------------------
 > collapsible Style1 -> input[type=checkbox]#collap_ck
 >> input[type=checkbox]#collap_ck:checked ~ #collapMenu
+
+--------------------------------------------------------
 > collapsible Style2 -> input[type=checkbox]#side_ck
 >> input[type=checkbox]#side_ck:checked ~ #sidebar
 
