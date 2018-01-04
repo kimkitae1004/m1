@@ -1,0 +1,21 @@
+@charset "utf-8";
+#sideOpener { display:block; width:32px; height:32px;
+    background-image:url("./src/aside_btn1.png");
+border-radius:19px; border:3px solid #ee7950; 
+position:fixed; bottom:100px; right:50px; 
+background-color:#fff; }
+#side_ck { display:none; }
+#side_ck:checked ~ #sideOpener { background-position:0px -32px; }
+#side_ck:checked ~ #sidebar { left:0px; }
+#sidebar { position:fixed; z-index:99; left:-100%;
+top:0; width:65%; height:100%; background-color:#f5b69f; /* #f9be38;  */
+box-shadow:5px 0px 10px #000; transition:1s; }
+.sideTitle { font-size:1.1em; color:#d44310; line-height: 58px; border-bottom:1px solid #f28e0c; 
+text-shadow:-1px -1px 1px #666; }
+#lnb li a { display:block; line-height:48px; font-size:0.8em; text-indent:30px; color:#333; 
+color:#ee7950; font-weight:bold; /* border-bottom:1px solid #e8bb08; */ }
+
+#lnb .itemTitle, #lnb .itemTitle a { font-weight:bold; font-size:0.85em; text-indent:15px; color:#e74c16; line-height:60px; } 
+#lnb .itemTitle { border-top:1px solid #f4d1c4; 
+border-bottom:1px solid #ca8871; text-shadow:0px 0px 0.5px #fff; }
+#lnb .itemTitle a { border-bottom:0px; }
