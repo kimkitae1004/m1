@@ -1,6 +1,6 @@
 @charset "utf-8";
 * { margin: 0; padding:0; }
-body, html { width: 100%; height:100%; background:#f4eddd;  }
+body, html { width: 100%; height:100%; background:#f4eddd; overflow-x: hidden; }
 a { text-decoration:none; }
 img { border:0; }
 ul { list-style:none; }
@@ -8,7 +8,7 @@ p { line-height:1.3; padding:10px; }
 h2 { text-align:center; line-height:1.6; }
 .wrap { clear:both; width:100%; }
 #hd { clear:both; width:100%; }
-.hdbar { width:100%; height:100px; background:#3d3e43; }
+.hdbar { width:100%; height:100px; background:#3d3e43; position:relative; }
 .home, .collap { position:absolute; width:62px; height: 36px; z-index:10; display:block; background-image:url("./src/split2.png"); top:32px; 
 text-indent:-9999px; }
 .home { left:10px; background-position:0px 0px; }
