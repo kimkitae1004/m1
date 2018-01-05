@@ -155,7 +155,7 @@ border-bottom:1px solid #ca8871; text-shadow:0px 0px 0.5px #fff; }
 <body>
     <header id="hd">
         <div class="hdbar">
-            <a href="index.html" class="home">home</a>
+            <a href="../index.html" class="home">home</a>
             <h2 class="title">BLACKPINK</h2>
             <label for="collap_ck" class="collap">collap</label>
         </div>
