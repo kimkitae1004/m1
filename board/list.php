@@ -153,7 +153,7 @@ h2 { text-align:center; line-height:1.6; }
 .wrap { clear:both; width:100%; }
 #hd { clear:both; width:100%; }
 .hdbar { width:100%; height:100px; background:#3d3e43; position:relative; }
-.home, .collap { position:absolute; width:62px; height: 36px; z-index:10; display:block; background-image:url("./src/split2.png"); top:32px; 
+.home, .collap { position:absolute; width:62px; height: 36px; z-index:10; display:block; background-image:url("../src/split2.png"); top:32px; 
 text-indent:-9999px; }
 .home { left:10px; background-position:0px 0px; }
 .collap { right:10px; background-position:-62px 0px;  }
@@ -208,6 +208,49 @@ color:#ee7950; font-weight:bold; /* border-bottom:1px solid #e8bb08; */ }
 border-bottom:1px solid #ca8871; text-shadow:0px 0px 0.5px #fff; }
 #lnb .itemTitle a { border-bottom:0px; }
     </style>
+<style>
+    #ft { clear:both; width:100%; height:100px;
+     background:#3d3e43; color:#fff; line-height:100px; 
+    position:fixed; bottom:0px; left:0; text-align:center; }
+</style>
+<style>
+    .pageTitle { text-indent:2%; line-height:60px; }
+    #bbsTable th, #bbsTable th, #bbsTable tr, #bbsTable thead, #bbsTable tfoot, #bbsTable tbody { margin:0; padding:0; }
+    #bbsTable { width:100%; margin:10px auto; }
+    #bbsTable thead { height:42px; }
+    #bbsTable thead tr { height:42px; }
+    #bbsTable tbody tr { height:32px; }
+    #bbsTable th { height:42px; background:#3d3e43; color:#fff;
+        font-size:0.85em; }
+    #bbsTable td { height:32px; border-bottom:1px dashed #333; 
+    font-size:0.8em; }
+    #bbsTable .no {width:10%; text-align:center}
+    #bbsTable .bbs_title {width:35%; text-indent:5px; 
+    text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+    #bbsTable .bbs_title a { color:#333; }
+    #bbsTable .author { width:17%;text-align:center}
+    #bbsTable .date { width:20%; text-align:center}
+    #bbsTable .hit { width:17%; text-align:center}
+    #bbsArticle .btn { display:block; border-radius:20px;
+     height:32px; font-size:0.8em; width:100px; text-align:center; 
+    line-height:32px; margin:10px;    }
+    #bbsArticle .btnWrite { background:#3d3e43; color:#fff; }
+    #bbsArticle .paging { clear:both; height:40px; line-height: 40px; padding-left:20px; }
+    #bbsArticle .paging li { padding:5px; float:left; 
+    font-size:0.8em; }
+    #bbsArticle .paging li.current { background:#3d3e43; color:#fff; }
+    #bbsArticle .paging a { display:block; color:#333; background:#fff; font-size:0.8em; }
+    #bbsArticle .searchBox { clear:both; margin-top:15px; 
+    width:90%; margin:30px auto;}
+    #bbsArticle .searchBox select, #bbsArticle .searchBox input { display:block; width:25%;
+    height:32px; color:#333; outline:0; border:1px solid #333; 
+    font-size:0.8em; float:left; margin-right: 2%; }
+    #bbsArticle .searchBox input { width:45%;  }
+    #bbsArticle .searchBox button { display:block; border-radius:20px; border:0px; outline:0; 
+     height:32px; font-size:0.8em; width:20%; text-align:center; 
+    line-height:32px;  background:#3d3e43; color:#fff; }
+    .blankBox { width:100%; height:150px;}
+</style>
 </head>
 <body>
      <header id="hd">
@@ -234,15 +277,15 @@ border-bottom:1px solid #ca8871; text-shadow:0px 0px 0.5px #fff; }
             </ul>
         </nav>
      </header>
-	<article class="boardArticle">
-		<h3>공지사항</h3>
+	<article id="bbsArticle">
+		<h3 class="pageTitle">공지사항</h3>
 		<div id="boardList">
-			<table width="300">
+			<table id="bbsTable">
 				<caption class="readHide"></caption>
 				<thead>
 					<tr>
 						<th scope="col" class="no">번호</th>
-						<th scope="col" class="title">제목</th>
+						<th scope="col" class="bbs_title">제목</th>
 						<th scope="col" class="author">작성자</th>
 						<th scope="col" class="date">작성일</th>
 						<th scope="col" class="hit">조회</th>
@@ -265,7 +308,7 @@ border-bottom:1px solid #ca8871; text-shadow:0px 0px 0.5px #fff; }
 						?>
 						<tr>
 							<td class="no"><?php echo $row['b_no']?></td>
-							<td class="title">
+							<td class="bbs_title">
 								<a href="./view.php?bno=<?php echo $row['b_no']?>"><?php echo $row['b_title']?></a>
 							</td>
 							<td class="author"><?php echo $row['b_id']?></td>
@@ -297,8 +340,9 @@ border-bottom:1px solid #ca8871; text-shadow:0px 0px 0.5px #fff; }
 			</div>
 		</div>
 	</article>
+    <div class="blankBox"></div>
     <footer id="ft">
-        <p class="copyrights">All Copyrights by kim @2018</p>
+        <h3 class="copyrights">All Copyrights by kim @2018</h3>
     </footer>
   <input type="checkbox" id="side_ck">
   <label for="side_ck" id="sideOpener"></label>
